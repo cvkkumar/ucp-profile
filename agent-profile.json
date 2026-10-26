@@ -1,0 +1,40 @@
+{
+  "ucp": {
+    "capabilities": {
+      "dev.ucp.shopping.cart": [
+        {
+          "schema": "https://ucp.dev/2026-08-25/schemas/shopping/cart.json",
+          "spec": "https://ucp.dev/2026-08-25/specification/shopping/cart/",
+          "version": "2026-08-25"
+        }
+      ],
+      "dev.ucp.shopping.checkout": [
+        {
+          "schema": "https://ucp.dev/2026-08-25/schemas/shopping/checkout.json",
+          "spec": "https://ucp.dev/2026-08-25/specification/shopping/checkout/",
+          "version": "2026-08-25"
+        }
+      ],
+      "dev.ucp.shopping.fulfillment": [
+        {
+          "extends": [
+            "dev.ucp.shopping.checkout",
+            "dev.ucp.shopping.cart"
+          ],
+          "version": "2026-08-25"
+        }
+      ]
+    },
+    "services": {
+      "dev.ucp.shopping": [
+        {
+          "schema": "https://ucp.dev/2026-08-25/services/shopping/mcp.openrpc.json",
+          "spec": "https://ucp.dev/2026-08-25/specification/overview/",
+          "transport": "mcp",
+          "version": "2026-08-25"
+        }
+      ]
+    },
+    "version": "2026-08-25"
+  }
+}
